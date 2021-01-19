@@ -32,7 +32,7 @@ public class FileUploadService {
         file.delete();
     }
 
-    private File convertMultiPartFiletoFile(final MultipartFile multipartFile){
+    public File convertMultiPartFiletoFile(final MultipartFile multipartFile){
         File file = new File(multipartFile.getOriginalFilename());
         try (final FileOutputStream outputStream = new FileOutputStream(file)){
             outputStream.write(multipartFile.getBytes());
