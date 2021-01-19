@@ -17,11 +17,8 @@ public class FileUploadController {
     @Autowired
     private FileUploadService service;
 
-
-
-
     @PostMapping("upload/s3")
-    public ResponseEntity<String> uploadFilee(@RequestParam("file")final MultipartFile multipartFile) {
+    public ResponseEntity<String> uploadFile(@RequestParam("file")final MultipartFile multipartFile) {
         service.uploadFile(multipartFile);
         String reponse = "upload";
         return new ResponseEntity<>(reponse, HttpStatus.OK);
