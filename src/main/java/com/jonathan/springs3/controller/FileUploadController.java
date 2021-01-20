@@ -38,11 +38,4 @@ public class FileUploadController {
 
     }
 
-    public void uploadDb(@RequestParam("file")MultipartFile multipartFile){
-
-    }
-
-
-
-
 }

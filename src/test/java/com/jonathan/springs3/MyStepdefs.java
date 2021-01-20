@@ -72,9 +72,12 @@ public class MyStepdefs extends SpringIntegrationTest{
 
     @Then("A file with the name should exist in the local directory that is name {string}")
     public void aFileWithTheNameShouldExistInTheLocalDirectoryThatIsName(String name) {
-        File f = new File("/Users/chavezjl1/Desktop/uploaded_"+name);
+        File f = new File("uploaded_"+name);
 
         Assertions.assertTrue(f.exists());
+
+//        deletes the file after testing
+        f.delete();
 
     }
 }

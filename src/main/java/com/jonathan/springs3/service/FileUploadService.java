@@ -56,8 +56,8 @@ public class FileUploadService {
 
 //    Saving to local
 
-//    file path to save
-    private String uploadFolderPath = "/Users/chavezjl1/Desktop/uploaded_";
+//    adds the words uploaded before the file name
+    private String uploadFolderPath = "uploaded_";
     public void uploadToLocal(MultipartFile file){
         try {
             byte[] data = file.getBytes();
